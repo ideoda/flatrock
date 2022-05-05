@@ -1,0 +1,45 @@
+version: '2.3'
+
+services:
+
+#    php:
+#        environment:
+#          - "BLACKFIRE_CLIENT_ID=1"
+#          - "BLACKFIRE_CLIENT_TOKEN=1"
+#          - "BLACKFIRE_SERVER_ID=1"
+#          - "BLACKFIRE_SERVER_TOKEN=1"
+#        dns: # add google public dns servers
+#            - 8.8.8.8
+#            - 8.8.4.4
+
+    nginx:
+        ports:
+            - "80:80"
+
+    mysql:
+      image: mysql:5.7
+      restart: always
+      environment:
+        MYSQL_DATABASE: 'quiz'
+        MYSQL_USER: 'user'
+        MYSQL_PASSWORD: 'q'
+        MYSQL_ROOT_PASSWORD: 'q'
+      ports:
+        - '3306:3306'
+      expose:
+        - '3306'
+      volumes:
+        - "./.mysql-data/db:/var/lib/mysql"
+
+    maildev:
+        ports:
+            - "1080:80"
+
+    phpmyadmin:
+        image: phpmyadmin/phpmyadmin:4.7
+        depends_on:
+            - mysql
+        links:
+            - "mysql:db"
+        ports:
+            - "8080:80"

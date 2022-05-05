@@ -1,0 +1,11 @@
+{% extends 'quiz/quiz.html.twig' %}
+
+{% block title %}Quiz Results{% endblock %}
+
+{% block content %}
+    <p>number of unanswered questions: {{ result.numberOfUnansweredQuestions }}</p>
+    <p>total score: {{ result.totalScore }}</p>
+    <p>submit date: {{ result.submitDate.format('Y.m.d H:i:s') }}</p>
+{% endblock %}
+
+

@@ -1,0 +1,11 @@
+{% extends 'quiz/quiz.html.twig' %}
+
+{% block title %}Famous Quote Quiz - {{ (isBinary ? 'Binary' : 'Multiple choice') ~ ' version' }}{% endblock %}
+
+{% block content %}
+    {{ form_start(form) }}
+    {{ form_rest(form) }}
+    {{ form_end(form) }}
+{% endblock %}
+
+

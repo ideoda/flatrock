@@ -1,0 +1,25 @@
+version: '2.3'
+
+services:
+    php:
+        build: docker/php
+        volumes:
+            - "./:/home/project/code"
+            - "project_composer:/home/project/.composer"
+        depends_on:
+            - mysql
+            - maildev
+    nginx:
+        build: docker/nginx
+        volumes:
+            - "./:/home/project/code"
+        depends_on:
+            - php
+    node:
+        build: docker/node
+        volumes:
+            - "./:/home/project/code"
+    maildev:
+        image: djfarrelly/maildev
+volumes:
+    project_composer:

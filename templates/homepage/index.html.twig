@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+<div class="text-center">
+    <h1>Famous Quote Quiz</h1>
+
+    <p class="mt-5">Create a web application representing the famous quote quiz where the user will have to pick
+        a correct answer to the asked questions. Depending on selected mode he/she will choose
+        from a list of answers, or simply to answer with Yes/No to the question.</p>
+
+    <a class="mt-5 btn btn-success" href="{{ path('quiz_questions') }}">Lets's start</a>
+</div>
+{% endblock %}

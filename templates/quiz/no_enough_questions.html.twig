@@ -1,0 +1,9 @@
+{% extends 'quiz/quiz.html.twig' %}
+
+{% block title %}Famous Quote Quiz - {{ (isBinary ? 'Binary' : 'Multiple choice') ~ ' version' }}{% endblock %}
+
+{% block content %}
+    <p>Unfortunately we don't have enough questions for this type... Please try again later.</p>
+{% endblock %}
+
+

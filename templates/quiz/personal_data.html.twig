@@ -1,0 +1,14 @@
+{% extends 'quiz/quiz.html.twig' %}
+
+{% block title %}Personal information{% endblock %}
+
+{% block content %}
+    <div>
+        <p>In order to watch the quiz results, please provide some information about you.</p>
+    </div>
+    {{ form_start(form) }}
+    {{ form_rest(form) }}
+    {{ form_end(form) }}
+{% endblock %}
+
+

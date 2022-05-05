@@ -1,0 +1,12 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    {% include 'quiz/upper_menu.html.twig' %}
+
+    <div class="text-center">
+        <h1 class="mb-5">{% block title %}{% endblock %}</h1>
+
+        {% block content %}{% endblock %}
+    </div>
+{% endblock %}
+

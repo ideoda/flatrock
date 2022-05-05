@@ -3,9 +3,29 @@
 {% block title %}Quiz Results{% endblock %}
 
 {% block content %}
-    <p>number of unanswered questions: {{ result.numberOfUnansweredQuestions }}</p>
-    <p>total score: {{ result.totalScore }}</p>
-    <p>submit date: {{ result.submitDate.format('Y.m.d H:i:s') }}</p>
+    <h3>Your Result:</h3>
+    <p>number of unanswered questions: {{ yourResult.numberOfUnansweredQuestions }}</p>
+    <p>total score: {{ yourResult.totalScore }}</p>
+    <p>submit date: {{ yourResult.submitDate.format('Y.m.d H:i:s') }}</p>
+
+    <h3>Hall Of Fame:</h3>
+    <table>
+        <thead>
+        <th>#</th>
+        <th>Name</th>
+        <th>Score</th>
+        </thead>
+        <tbody>
+        {% for key, result in hallOfFame %}
+            <tr>
+                <td>{{ key+1 }}</td>
+                <td>{{ result.firstName ~ ' ' ~ result.lastName }}</td>
+                <td>{{ result.totalScore }}</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
 {% endblock %}
 
 

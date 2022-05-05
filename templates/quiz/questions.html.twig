@@ -3,6 +3,10 @@
 {% block title %}Famous Quote Quiz - {{ (isBinary ? 'Binary' : 'Multiple choice') ~ ' version' }}{% endblock %}
 
 {% block content %}
+    <div class="fliptimer">
+        <div class="minutes"></div>
+        <div class="seconds"></div>
+    </div>
     {{ form_start(form) }}
     {{ form_rest(form) }}
     {{ form_end(form) }}

@@ -1,3 +1,27 @@
-body {
-    background-color: lightgray;
+body>div{
+    box-shadow: 15px 15px 15px #666;
+}
+.route_quiz_questions form>div{
+    display:none;
+}
+.route_quiz_personal_data label{
+    width:200px;
+    margin-bottom:10px;
+}
+.route_settings_index label,
+.route_settings_index select{
+    width:100px;
+}
+.flipTimer{
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+.route_quiz_results table{
+    margin: 0 auto!important;
+}
+.route_quiz_results table th,
+.route_quiz_results table td{
+    border:1px solid #ccc;
+    padding:5px;
 }

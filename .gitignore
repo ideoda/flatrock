@@ -1,4 +1,3 @@
-
 ###> symfony/framework-bundle ###
 /.env.local
 /.env.local.php
@@ -18,6 +17,9 @@
 /phpunit.xml
 .phpunit.result.cache
 ###< phpunit/phpunit ###
+.mysql-data
+.idea
+.env
 
 ###> symfony/webpack-encore-bundle ###
 /node_modules/
@@ -25,7 +27,3 @@
 npm-debug.log
 yarn-error.log
 ###< symfony/webpack-encore-bundle ###
-
-.mysql-data
-.idea
-.env

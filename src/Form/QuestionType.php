@@ -19,18 +19,20 @@ class QuestionType extends AbstractType
 
             $this->addQuestion($builder, $name, $question);
 
-            $builder->add('button'.($key+1), ButtonType::class, [
+            $builder->add('button' . ($key + 1), ButtonType::class, [
                 'label' => 'Next',
                 'attr' => [
-                    'class' => 'btn btn-success mt-5',
+                    'class' => 'btn btn-success mt-5 next',
                 ],
             ]);
         }
 
+        $builder->remove('button' . ($key + 1));
+
         $builder->add('submit', SubmitType::class, [
-            'label' => 'save',
+            'label' => 'Save',
             'attr' => [
-                'class' => 'btn btn-success',
+                'class' => 'btn btn-warning mt-5',
             ],
         ]);
     }

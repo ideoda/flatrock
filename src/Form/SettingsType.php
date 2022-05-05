@@ -20,9 +20,9 @@ class SettingsType extends AbstractType
         ]);
 
         $builder->add('submit', SubmitType::class, [
-            'label' => 'save',
+            'label' => 'Save',
             'attr' => [
-                'class' => 'btn btn-success',
+                'class' => 'btn btn-success mt-5',
             ],
         ]);
     }

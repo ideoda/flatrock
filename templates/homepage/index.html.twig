@@ -1,12 +1,48 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
+    {% include 'homepage/homepage_menu.html.twig' %}
+
 <div class="text-center">
     <h1>Famous Quote Quiz</h1>
 
     <p class="mt-5">Create a web application representing the famous quote quiz where the user will have to pick
         a correct answer to the asked questions. Depending on selected mode he/she will choose
-        from a list of answers, or simply to answer with Yes/No to the question.</p>
+        from a list of answers, or simply to answer with Yes/No to the question.
+        There should be a settings screen, where the application mode could be selected as follows:
+        1) Binary (Yes/No) – default mode
+        2) Multiple choice – listing 3 possible answers, one of which will be the correct one
+        By default, a single session consists of 10 quotes. Changing the mode results in a session
+        restart..
+        The app should include authorization of the admin user, who can add questions and apply
+        answers, either Multiple choice or Binary. Admin user should be able to see the history of the
+        guest users who took the quiz:
+         Name
+         Last Name
+         Email
+         Total Score
+         Total Number of unanswered questions
+         Quiz Submit Date / Time
+        If admin user will create new question with answers, it should be displayed in the list of main
+        questionnaires, that guest users will take.
+        App should have the button to start the session. When the user clicks the button to begin the
+        questionnaire, the app should display a timer that indicates the total time of the quiz ( for
+        example, 5 minutes 00:05:00 ), and if the timer runs out before the user completes and submits all of the questions, the session should be finished and the app should display the
+        total score and number of unanswered questions with the Restart button.
+        Regardless of the currently selected mode, if the user chooses the correct answer, the
+        displayed message is “Correct! The right answer is …”. In case of a wrong answer, the
+        message should be “Sorry, you are wrong! The right answer is …”.
+        After successful session completion, a statistics screen with the results should be shown with
+        a Restart button.
+        The app should have the top scorers screen where will be the list of all users who took the
+        quiz. Users data should include:
+        • Name
+        • Email
+        • Total Score
+        • Time used on taking the quiz ( Example: 00:03:22 )
+        Users should be listed based on the number of correct answers and time used on taking the
+        quiz. If the 2 users have the same score but one of them used the less time on taking the
+        quiz, he/she will be the first in the list.</p>
 
     <a class="mt-5 btn btn-success" href="{{ path('quiz_questions') }}">Lets's start</a>
 </div>

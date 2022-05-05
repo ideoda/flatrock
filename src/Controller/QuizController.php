@@ -3,6 +3,7 @@
 namespace App\Controller;
 
 use App\Entity\BinaryQuestion;
+use App\Entity\QuizResult;
 use App\Entity\TripleQuestion;
 use App\Form\BinaryQuestionType;
 use App\Form\PersonalDataType;
@@ -122,8 +123,16 @@ class QuizController extends AbstractController
 
         $result = $this->quizService->createResult($questions, $answers, $personalData);
 
+        $isBinary = $request->getSession()->get('binary', true);
+
+
+
+        $hallOfFame =  $this->entityManager->getRepository(QuizResult::class)->getHallOfFame();
+
+
         return $this->render('quiz/result.html.twig', [
-            'result' => $result,
+            'yourResult' => $result,
+            'hallOfFame' => $hallOfFame,
         ]);
     }
 }

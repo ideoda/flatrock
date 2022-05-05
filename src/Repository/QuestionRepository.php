@@ -20,4 +20,13 @@ abstract class QuestionRepository extends ServiceEntityRepository
 
         return $return;
     }
+
+    public function getHallOfFame(): array
+    {
+        $builder = $this->createQueryBuilder('question');
+
+        $return = $builder->getQuery()->getResult();
+
+        return $return;
+    }
 }

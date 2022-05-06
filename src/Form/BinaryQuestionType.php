@@ -21,6 +21,10 @@ class BinaryQuestionType extends QuestionType
                 return ['class' => 'mx-3'];
             },
             'label_attr' =>  ['class' => 'mb-5'],
+            'attr' =>  [
+                'data-id' => $question->getId(),
+                'class' => 'questioninputs',
+            ],
         ]);
     }
 }

@@ -3,6 +3,7 @@
 namespace App\Controller;
 
 use App\Entity\BinaryQuestion;
+use App\Entity\Question;
 use App\Entity\QuizResult;
 use App\Entity\TripleQuestion;
 use App\Form\BinaryQuestionType;
@@ -11,6 +12,7 @@ use App\Form\TripleQuestionType;
 use App\Service\QuizService;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
@@ -134,5 +136,13 @@ class QuizController extends AbstractController
             'yourResult' => $result,
             'hallOfFame' => $hallOfFame,
         ]);
+    }
+
+    /**
+     * @Route("/evaluate/{id}", name="_evaluate", options={"expose"=true})
+     */
+    public function evaluate(Request $request, Question $question): JsonResponse
+    {
+        return new JsonResponse([$question->getGoodAnswer()]);
     }
 }

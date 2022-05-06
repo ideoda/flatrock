@@ -3,7 +3,7 @@
 - integrate xdebug
 - intalling encore: issues, installing by symfony docs, found a bug
 - building symfony controllers+twig: homepage+quiz
-- first push to git repo
+- first push to git repo, gitignore settings
 - integrate encore by another way: succeeded
 - issues with admin login: symfony make auth command drives me to a bug - no resolution found
 - integrate jQuery, timer
@@ -14,4 +14,5 @@
 extra notes:
 - no translation used in strings (nor in php, nor in twig): it was faster
 - the fliptimer jquery plugin is not an npm, it has been downloaded to the assets folder: it was faster
-- all js has been wrote into app.js, not in separated files: it was faster
+- commits are big, and contains more than one operation: it was faster
+- 

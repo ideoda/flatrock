@@ -1,0 +1,9 @@
+- finding am operatable boilerplate
+- integrate mysql service: issues with connection: docker container interference bug
+- integrate xdebug
+- intalling encore: issues, installing by symfony docs, found a bug
+- building symfony controllers+twig: homepage+quiz
+- integrate encore by another way: succeeded
+- issues with admin login: symfony make auth command drives me to a bug - no resolution found
+- integrate jQuery, timer
+- 

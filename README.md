@@ -25,3 +25,9 @@ admin feature is not implemented:
 - I went into this two times but I had an issue with symfony make:... commands, so I couldnt create the whole user auth system.
 - Thats why I gave up it because I not have time to create it by hand
 - The admin question crud is also not implemented, because it consumes more time, but technically its not more complicated than I have done on the quiz. we can discuss how I would make it.
+
+how to use:
+- git clone
+- docker-compose up
+- docker-compose exec php npm run build
+- instead of giving a db export, ther is a url which can be used to upload questions to the db, please use that: /upload - it was much faster

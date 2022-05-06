@@ -29,5 +29,10 @@ admin feature is not implemented:
 how to use:
 - git clone
 - docker-compose up
+- copy .env.dist to .env
+- docker-compose exec php composer i
+- docker-compose exec php npm i
 - docker-compose exec php npm run build
+- docker-compose exec php php bin/console d:d:c
+- docker-compose exec php php bin/console d:s:u --force
 - instead of giving a db export, ther is a url which can be used to upload questions to the db, please use that: /upload - it was much faster
